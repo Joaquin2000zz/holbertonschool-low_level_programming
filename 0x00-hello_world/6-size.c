@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - prints the size of various types on the computer it is compiled and run on
+ * main - prints the size of various variable's types
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -10,7 +10,7 @@ int main(void)
 	float estas;
 	long int todo;
 	long long int bien;
-	
+
 	printf("Size of char: %zu byte(s)\n", sizeof(ola));
 	printf("Size of int: %zu byte(s)\n", sizeof(como));
 	printf("Size of long int: %zu byte(s)\n", sizeof(todo));
