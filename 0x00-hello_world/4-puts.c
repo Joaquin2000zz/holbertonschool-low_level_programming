@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-/* 
- *Main: excecuting a puts to print a text output
+/** 
+* main - excecuting a puts to print a text output
+* Return: Programming is like building a multilingual puzzle
 */
 int main(void)
 {
