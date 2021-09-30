@@ -10,11 +10,11 @@ int main(void)
 	long int todo;
 	long long int bien;
 	
-	printf("Size of char: %zu bytes\n", sizeof(ola));
-	printf("Size of int: %zu bytes\n", sizeof(como));
-	printf("Size of estas: %zu bytes\n", sizeof(estas));
-	printf("Size of todo: %zu bytes\n", sizeof(todo));
-	printf("Size of bien: %zu bytes\n", sizeof(bien));
+	printf("Size of char: %zu byte(s)\n", sizeof(ola));
+	printf("Size of int: %zu byte(s)\n", sizeof(como));
+	printf("Size of float: %zu byte(s)\n", sizeof(estas));
+	printf("Size of long int: %zu byte(s)\n", sizeof(todo));
+	printf("Size of long long int: %zu byte(s)\n", sizeof(bien));
 
 	return (0);
 }
