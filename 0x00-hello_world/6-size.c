@@ -12,9 +12,9 @@ int main(void)
 	
 	printf("Size of char: %zu byte(s)\n", sizeof(ola));
 	printf("Size of int: %zu byte(s)\n", sizeof(como));
-	printf("Size of float: %zu byte(s)\n", sizeof(estas));
 	printf("Size of long int: %zu byte(s)\n", sizeof(todo));
 	printf("Size of long long int: %zu byte(s)\n", sizeof(bien));
+	printf("Size of float: %zu byte(s)\n", sizeof(estas));
 
 	return (0);
 }
