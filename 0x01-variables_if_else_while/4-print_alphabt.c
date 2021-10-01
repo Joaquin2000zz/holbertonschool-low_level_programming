@@ -11,9 +11,10 @@ int main(void)
 	char n = '\n';
 
 	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
-	putchar(alphabet, n);
+	putchar(alphabet);
 	for (alphaBET = 'A' ; alphaBET <= 'Z' ; alphaBET++)
-	putchar(alphaBET, n);
+	putchar(alphaBET);
+	puchar(n);
 
 	return (0);
 }
