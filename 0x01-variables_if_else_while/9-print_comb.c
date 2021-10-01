@@ -12,13 +12,13 @@ int main(void)
 	{
 	if(i < 10)
 	{
-	putchar(i)
-	putchar(',')
-	putchar(' ')
+	putchar(i);
+	putchar(',');
+	putchar(' ');
 	}
 	else
 	{
-	putchar('\n')
+	putchar('\n');
 	}	
 	break;
 	i++;
