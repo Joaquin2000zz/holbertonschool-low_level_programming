@@ -6,14 +6,14 @@
 
 int main(void)
 {
-char alphabet;
-char n = '\n';
+	char alphabet;
+	char n = '\n';
 
-for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++);
-{
-if (alphabet = !'q' | !'e');
-putchar(alphabet);
-}
-putchar(n);
-return (0);
+	for ( alphabet = 'a' ; alphabet <= 'z' ; alphabet++ );
+	{
+	if (alphabet = !'q' | !'e');
+	putchar(alphabet);
+	}
+	putchar(n);
+	return (0);
 }
