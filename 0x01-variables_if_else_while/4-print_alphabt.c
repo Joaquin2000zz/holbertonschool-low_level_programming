@@ -14,7 +14,7 @@ int main(void)
 	putchar(alphabet);
 	for (alphaBET = 'A' ; alphaBET <= 'Z' ; alphaBET++)
 	putchar(alphaBET);
-	puchar(n);
+	putchar(n);
 
 	return (0);
 }
