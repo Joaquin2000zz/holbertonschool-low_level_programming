@@ -16,13 +16,13 @@ int main(void)
 	{
 	printf("Last digit of %d and is grater than 5" ,n);
 	}
-	else if (n % 10 == void)
+	else if (n % 10 == 0)
 	{
-	printf("Last digit of %d", n "and is 0");
+	printf("Last digit of %d and is 0" ,n);
 	}
-	else if (n % 10 < 6 && !void)
+	else if (n % 10 < 6 && !0)
 	{
-	printf("Last digit of %d", n "and is less than 6 and not 0");
+	printf("Last digit of %d and is less than 6 and not 0" ,n);
 	}
 	return (0);
 }
