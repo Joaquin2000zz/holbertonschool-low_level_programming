@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * * main - for
- * * Return: the alphabet
- * */
+* main - for
+* Return: the alphabet
+*/
 
 int main(void)
 {
