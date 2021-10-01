@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 * main - for
-* Return: the alphabet
+* Return: counting
 */
 
 int main(void)
