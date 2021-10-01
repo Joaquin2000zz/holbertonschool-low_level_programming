@@ -21,7 +21,6 @@ int main(void)
 	{
 	putchar('\n');
 	}	
-	break;
 	i++;
 	}
 
