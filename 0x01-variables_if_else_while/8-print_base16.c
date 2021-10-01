@@ -8,7 +8,7 @@ int main(void)
 {
 	int hexa;
 
-	for (hexa = 0 ; hexa <= 16 ; hexa++)
+	for (hexa = 0 ; hexa <= 15 ; hexa++)
 	printf("%x", hexa);
 	putchar('\n');
 
