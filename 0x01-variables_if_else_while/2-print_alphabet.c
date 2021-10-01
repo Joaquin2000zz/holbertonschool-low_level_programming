@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - for 
+* main - for
 * return: the alphabet
 */
 
