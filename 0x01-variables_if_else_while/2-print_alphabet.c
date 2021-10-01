@@ -6,9 +6,9 @@
 
 int main(void)
 {
-	char alphabet = "a";
+	char alphabet = 'a';
 
-	for (alphabet = "a" ; ch <= "z" ; alphabet++)
+	for (alphabet = 'a' ; ch <= 'z' ; alphabet++)
 	putchar(alphabet);
 	
 	return (0);
