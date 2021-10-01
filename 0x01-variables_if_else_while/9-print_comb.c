@@ -7,8 +7,8 @@
 int main(void)
 {
 	int i;
-
-	while (i=0 <= 10)
+	i = 0;
+	while (i <= 10)
 	{
 /*	if (num%i == 0){*/
 	printf("%d", i);
