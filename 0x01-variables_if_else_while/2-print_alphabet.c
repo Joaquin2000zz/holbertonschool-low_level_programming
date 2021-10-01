@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 * main - for
-* return: the alphabet
+* Return: the alphabet
 */
 
 int main(void)
