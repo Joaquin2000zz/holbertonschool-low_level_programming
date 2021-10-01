@@ -10,8 +10,8 @@ int main(void)
 	char alphaBET = 'A';
 	char n = '\n';
 
-	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++ if(alphabet = !'q' | !'e'))
-	putchar(alphabet);
+	for (if(alphabet = !'q' | !'e') alphabet = 'a' ; alphabet <= 'z' ; alphabet++);
+	putchar(n)
 
 	return (0);
 }
