@@ -10,11 +10,18 @@ int main(void)
 	i = 0;
 	while (i <= 10)
 	{
+	if(i < 10)
+	{
+	putchar(i)
+	putchar(',')
+	putchar(' ')
+	}
+	else
+	{
+	putchar('\n')
+	}	
 	break;
-	putchar(',');
-	putchar(' ');
 	i++;
-	putchar(i);
 	}
 
 	return (0);
