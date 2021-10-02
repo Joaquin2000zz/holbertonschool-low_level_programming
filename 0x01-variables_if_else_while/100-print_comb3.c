@@ -10,7 +10,9 @@ int main(void)
 
 	i[0] = 48;
 	i[1] = 49;
-
+	
+	if (i[1] <= 57)
+	{
 	while (i[1] <= 57)
 	{
 	putchar(i[0]);
@@ -22,9 +24,11 @@ int main(void)
 	}
  	else
 	{
-	putchar('\n');
+	
+/*	putchar('\n');*/
 	}
 	i[1]++;
  	}
+	}
  	return (0);
 }
