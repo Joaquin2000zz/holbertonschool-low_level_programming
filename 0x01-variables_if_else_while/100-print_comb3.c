@@ -7,13 +7,13 @@
 int main(void)
 {
 	int i;
-	int ii;
+/*	int ii; */
 	
-	for(i=0 ; i <= 56 ; i++)
+	for(i = 0 ; i <= 56 ; i++)
 	{
 	putchar(i);
-	for(ii=0 ; i <= 57 ; ii++)
-	putchar(ii);
-	}
+/**	for(ii = 0 ; i <= 57 ; ii++)
+*	putchar(ii);
+*/	}
  	return (0);
 }
