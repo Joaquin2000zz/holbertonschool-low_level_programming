@@ -8,9 +8,6 @@ int main(void)
 {
 	int i;
 	int ii;
-	char oO;
-
-	oO = ", ";
 
 	for( ii = 48 ; ii <= 56 ; ii++ )
 	{
@@ -20,7 +17,8 @@ int main(void)
 	{
 	putchar(ii);
 	putchar(i);
-	putchar(oO);
+	putchar(',');
+	putchar(' ');
 	}
 	}
 	}
