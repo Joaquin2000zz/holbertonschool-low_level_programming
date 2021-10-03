@@ -18,7 +18,7 @@ int main(void)
 	{
 	if (iii < i)
 	{
-	putchar(iii)
+	putchar(iii);
 	putchar(ii);
 	putchar(i);
 	}
