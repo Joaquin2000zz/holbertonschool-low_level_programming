@@ -13,24 +13,12 @@ int main(void)
 	{
 	for( i = 48 ; i <= 57 ; i++ )
 	{
-	if( i == 0 )
+	if( i != ii )
 	{
 	putchar(i);	
-	}
-	if( i == 50 && ii == 57 )
-	{
-	putchar(i);
-	}
-	if( i == 51 && ii == 48 )
-	{	
-	putchar(i);
-	}	
-	else
-	{
-	putchar(i);
+	putchar(ii)
 	}
 	}
-	putchar(ii);
 	}
  	return (0);
 	}
