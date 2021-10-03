@@ -21,8 +21,12 @@ int main(void)
 	putchar(i);
 	}
 	else if( i == 51 && ii == 48 )
+	{	
 	putchar(i);
+	}	
+	else
+	{
+	putchar(i)
 	putchar(ii);
 	}
  	return (0);
-}
