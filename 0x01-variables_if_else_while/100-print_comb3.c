@@ -8,20 +8,20 @@ int main(void)
 {
 	int i = 0;
 	
-	for( i == 49 ; i <= 56 ; i++ )
+	for( ii == 49 ; ii <= 56 ; i++ )
 	{
 	for( i == 48 ; i <= 57 ; i++ )
 	if( i == 49 )
 	{
 	putchar(i);	
 	}
-	else if( i == 50 && i = 57 )
+	else if( i == 50 && ii = 57 )
 	{
 	putchar(i);
 	}
-	else if( i == 51 && i == 48 )
+	else if( i == 51 && ii == 48 )
 	putchar(i);
-	putchar(i);
+	putchar(ii);
 	}
  	return (0);
 }
