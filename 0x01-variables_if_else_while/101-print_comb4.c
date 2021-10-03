@@ -13,7 +13,7 @@ int main(void)
 	for (iii = 48 ; iii <= 55 ; iii++)
 	{
 	for (ii = 49 ; ii <= 56 ; ii++)
-	{	
+	{
 	for (i = 50 ; i <= 57 ; i++)
 	{
 	if (iii < i && iii < ii && ii < i)
