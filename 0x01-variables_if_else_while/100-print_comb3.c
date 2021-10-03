@@ -17,7 +17,7 @@ int main(void)
 	{
 	putchar(i);	
 	}
-	else if( i == 50 && ii = 57 )
+	else if( i == 50 && ii == 57 )
 	{
 	putchar(i);
 	}
