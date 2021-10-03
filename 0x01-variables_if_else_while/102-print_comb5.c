@@ -19,7 +19,7 @@ int main(void)
 	{
 	for (i = 49 ; i <= 57 ; i++)
 	{
-	if (iiii <= iii && iiii != i && iii != i)
+	if (iiii <= iii && iiii != i && iii != i && (iiii != 48) != (iii != 48))
 	{
 	putchar(iiii);
 	putchar(iii);
