@@ -17,11 +17,11 @@ int main(void)
 	{
 	putchar(i);	
 	}
-	else if( i == 50 && ii == 57 )
+	if( i == 50 && ii == 57 )
 	{
 	putchar(i);
 	}
-	else if( i == 51 && ii == 48 )
+	if( i == 51 && ii == 48 )
 	{	
 	putchar(i);
 	}	
