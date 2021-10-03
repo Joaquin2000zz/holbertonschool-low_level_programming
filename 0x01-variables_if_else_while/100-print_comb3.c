@@ -6,8 +6,9 @@
 
 int main(void)
 {
-	int i = 0;
-	
+	int i;
+	int ii;
+
 	for( ii == 49 ; ii <= 56 ; i++ )
 	{
 	for( i == 48 ; i <= 57 ; i++ )
