@@ -13,13 +13,16 @@ int main(void)
 	{
 	for( i = 49 ; i <= 57 ; i++ )
 	{
-	if( ii < i && i < 57 )
+	if( ii < i )
 	{
 	putchar(ii);
 	putchar(i);
+	}
+	else if( i < 57 )
+	{
 	putchar(',');
 	putchar(' ');
-	}
+	}	
 	}
 	}
  	return (0);
