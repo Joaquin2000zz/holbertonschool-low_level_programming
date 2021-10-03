@@ -15,9 +15,9 @@ int main(void)
 	{
 	if( i != ii )
 	{
-	putchar(ii);	
-	putchar(i);
 	}
+	putchar(ii);
+	putchar(i);
 	putchar(',');
 	putchar(' ');
 	}
