@@ -8,9 +8,9 @@ int main(void)
 {
 	int i;
 	int ii;
-	char o.O;
+	char oO;
 
-	o.O = ", ";
+	oO = ", ";
 
 	for( ii = 48 ; ii <= 56 ; ii++ )
 	{
@@ -20,7 +20,7 @@ int main(void)
 	{
 	putchar(ii);
 	putchar(i);
-	putchar(o.O);
+	putchar(oO);
 	}
 	}
 	}
