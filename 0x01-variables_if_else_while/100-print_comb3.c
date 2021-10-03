@@ -6,14 +6,22 @@
 
 int main(void)
 {
-	int i;
-	int ii;
+	int;
 	
-	for(i = 48 ; i <= 56 ; i++)
+	for( i == 49 ; i <= 56 ; i++ )
+	{
+	for( i == 48 ; i <= 57 ; i++ )
+	if( i == 49 )
+	{
+	putchar(i)	
+	}
+	else if( i == 50 && i = 57 )
 	{
 	putchar(i);
-	for(ii = 49 ; i <= 57 ; ii++)
-	putchar(ii);
+	}
+	else if( i == 51 && i == 48 )
+	putchar(i);
+	putchar(i);
 	}
  	return (0);
 }
