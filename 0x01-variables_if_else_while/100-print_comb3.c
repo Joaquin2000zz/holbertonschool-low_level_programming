@@ -12,6 +12,7 @@ int main(void)
 	for( ii == 49 ; ii <= 56 ; i++ )
 	{
 	for( i == 48 ; i <= 57 ; i++ )
+	{
 	if( i == 49 )
 	{
 	putchar(i);	
@@ -26,7 +27,9 @@ int main(void)
 	}	
 	else
 	{
-	putchar(i)
+	putchar(i);
 	putchar(ii);
 	}
+	}
  	return (0);
+	}
