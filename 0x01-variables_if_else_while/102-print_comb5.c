@@ -15,11 +15,11 @@ int main(void)
 		{
 			if (ii != i)
 			{
-				putchar(((ii/10)%10)+48);
-				putchar(((ii)%10)+48);
+				putchar(((ii/10) % 10) + 48);
+				putchar(((ii) % 10) + 48);
 				putchar(' ');
-				putchar(((i/10)%10)+48);
-				putchar(((i)%10)+48);
+				putchar(((i/10) % 10) + 48);
+				putchar(((i)%10) + 48);
 				if (ii < 98)
 				{
 					putchar(',');
