@@ -18,8 +18,8 @@ int main(void)
 				putchar(((ii/10)%10)+48);
 				putchar(((ii)%10)+48);
 				putchar(' ');
-				putchar(((ii/10)%10)+48);
-				putchar(((ii)%10)+48);
+				putchar(((i/10)%10)+48);
+				putchar(((i)%10)+48);
 			}
 			if (ii != 57 && i != 56 && ii != i)
 			{
