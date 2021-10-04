@@ -9,17 +9,17 @@ int main(void)
 	int i;
 	int ii;
 
-	for (ii = 48 ; ii <= 56 ; ii++)
+	for (ii = 0 ; ii <= 99 ; ii++)
 	{
-	for (i = 48 ; i <= 56 ; i++)
+	for (i = ii ; ii <= 99 ; i++)
 	{
 	if (ii != i)
 	{
-	putchar(ii);
-	putchar(ii);
+	putchar(((ii/10)%10)+48);
+	putchar(((ii/10)%10)+48);
 	putchar(' ');
-	putchar(i);
-	putchar(i);
+	putchar(((ii/1)%10)+48);
+	putchar(((ii/1)%10)+48);
 	}
 	if (ii != 57 && i != 56 && ii != i)
 	{
