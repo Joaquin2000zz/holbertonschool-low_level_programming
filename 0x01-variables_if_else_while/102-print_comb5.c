@@ -20,11 +20,11 @@ int main(void)
 				putchar(' ');
 				putchar(((i/10)%10)+48);
 				putchar(((i)%10)+48);
-			}
-			if (ii < 98)
-			{
-				putchar(',');
-				putchar(' ');
+				if (ii < 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
