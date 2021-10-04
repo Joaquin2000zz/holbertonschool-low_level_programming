@@ -11,29 +11,22 @@ int main(void)
 	int iii;
 	int iiii;
 
-	for (iiii = 48 ; iiii <= 57 ; iiii++)
+	for (ii = 48 ; ii <= 56 ; ii++)
 	{
-	for (iii = 48 ; iii <= 56 ; iii++)
+	for (i = 48 ; i <= 56 ; i++)
 	{
-	for (ii = 48 ; ii <= 57 ; ii++)
+	if (ii != i)
 	{
-	for (i = 49 ; i <= 57 ; i++)
-	{
-	if ((iiii || iii) != (ii || i))
-	{
-	putchar(iiii);
-	putchar(iii);
-	putchar(' ');
 	putchar(ii);
+	putchar(ii);
+	putchar(' ');
+	putchar(i);
 	putchar(i);
 	}
 	if (iiii != 57 && iii != 56 && iiii != i && (iiii && iii) != (ii && i))
 	{
 	putchar(',');
 	putchar(' ');
-	}
-	}
-	}
 	}
 	}
 	putchar('\n');
