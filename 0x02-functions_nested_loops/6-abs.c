@@ -1,12 +1,13 @@
 #include "main.h"
 /**
-* main - check the code
+* _abs - check the code
 *
 * Return: Always 0.
 */
 int _abs(int x)
 {
 	int absolute;
+	
 	if (x > 0)
 	{
 	absolute = x;
