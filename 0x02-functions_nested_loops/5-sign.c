@@ -14,7 +14,7 @@ int print_sign(int n)
 		_putchar('+');
 		return (1);
 	}
-	else if (n == 49)
+	else if (n == 48)
 	{
 		_putchar('0');
 		return (0);
