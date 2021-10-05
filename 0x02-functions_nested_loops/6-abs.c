@@ -4,12 +4,16 @@
 *
 * Return: Always 0.
 */
-int _abs(int)
+int _abs(int x)
 {
-	int x;
 	int absolute;
-
-	absolute = %x;
-
-	return (absolute);
+	if (x > 0)
+	{
+	absolute = x;
+	}
+	else if (x < 0) 
+	{
+	absolute = x*(-1);
+	}
+	return (x);
 }
