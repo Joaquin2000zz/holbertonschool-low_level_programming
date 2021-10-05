@@ -16,7 +16,7 @@ void jack_bauer(void)
 		{
 			if (hours <= 23 && minutes <= 59)
 			{
-				_putchar(minutes);
+				_putchar(minutes + 48);
 			}
 		}	
 	}
