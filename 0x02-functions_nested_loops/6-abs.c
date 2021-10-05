@@ -10,11 +10,11 @@ int _abs(int x)
 	if (x < 0)
 	{
 	absolute = x*(-1);
-	putchar(x);
+	_putchar(x);
 	}
 	else
 	{
-	putchar(x);
+	_putchar(x);
 	}
 	return (x);
 }
