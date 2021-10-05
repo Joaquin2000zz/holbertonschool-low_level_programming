@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* main - check the code
+* print_last_digit - print the last number of the input as output
 *@x: this variable catch the last number of the input as output
 * Return: Always 0.
 */
