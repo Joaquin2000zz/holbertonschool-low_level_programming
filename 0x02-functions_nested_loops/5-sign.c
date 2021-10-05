@@ -11,14 +11,17 @@ int print_sign(int n)
 
 	if (n >= 49 && n <= 57)
 	{
-		return (+1);
+		putchar('+')
+		return (1);
 	}
 	else if (n == 49)
 	{
+		putchar('0')
 		return (0);
 	}
 	else
 	{
-		return (-1);
+		putchar('-')
+		return (1);
 	}
 }
