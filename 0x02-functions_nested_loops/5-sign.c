@@ -9,7 +9,7 @@
 int print_sign(int n)
 {
 
-	if (n >= 49 && c <= 57)
+	if (n >= 49 && n <= 57)
 	{
 		return (1);
 	}
