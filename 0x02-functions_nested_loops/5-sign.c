@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _isalpha - check the code.
+* print_sign - check the code.
 *@n: boolean value that define if the input is negative, zero or positive
 * Return: boolean.
 */
