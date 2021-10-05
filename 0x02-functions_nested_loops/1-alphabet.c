@@ -15,8 +15,3 @@ char alphabet = 'a';
 	putchar('\n');
 
 }
-
-int main(void)
-{
-	print_alphabet();
-}
