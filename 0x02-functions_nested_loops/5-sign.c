@@ -11,7 +11,7 @@ int print_sign(int n)
 
 	if (n >= 49 && n <= 57)
 	{
-		return (1);
+		return (+1);
 	}
 	else if (n == 49)
 	{
@@ -19,6 +19,6 @@ int print_sign(int n)
 	}
 	else
 	{
-		return (47);
+		return (-1);
 	}
 }
