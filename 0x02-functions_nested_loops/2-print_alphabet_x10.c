@@ -7,6 +7,8 @@
 */
 int main(void)
 {
+	int i;
+
 	for(i=0 ; i < 11 ; i++)
 	print_alphabet();
 
