@@ -6,11 +6,9 @@
 */
 int _abs(int x)
 {
-	int absolute;
 	if (x < 0)
 	{
-	absolute = x*(-1);
-	_putchar(x);
+	_putchar(x * (-1);
 	}
 	else
 	{
