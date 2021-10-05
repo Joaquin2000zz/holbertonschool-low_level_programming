@@ -6,5 +6,5 @@
 */
 int print_last_digit(int x);
 {
-putchar(1%10);
+_putchar(1%10);
 }
