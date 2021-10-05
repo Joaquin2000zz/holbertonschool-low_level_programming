@@ -9,7 +9,7 @@
 int print_sign(int n)
 {
 
-	if (n <= 99 && n >= 1)
+	if (n >= 1)
 	{
 		_putchar('+');
 		return (1);
