@@ -1,7 +1,14 @@
-#include <stdio.h>
 #include "main.h"
-int main(void)
+
+/**
+* main - use a for to print the alphabet
+*
+* Return: Always 0.
+*/
+int print_alphabet(char alphabet)
 {
-	print_alphabet();
-	return (0);
+alphabet = 'a';
+	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
+	putchar(alphabet);
+	putchar('\n');
 }
