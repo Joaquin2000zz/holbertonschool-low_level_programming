@@ -2,8 +2,8 @@
 
 /**
 * _isalpha - check the code.
-*@c: boolean value that define if the input is a lowercase or not
-* Return: Always 0.
+*@n: boolean value that define if the input is negative, zero or positive
+* Return: boolean.
 */
 
 int print_sign(int n)
