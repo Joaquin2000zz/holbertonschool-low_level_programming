@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* in - prints literally _putchar
+* main - literally prints _putchar
 * Return: Always 0 (Success)
 */
 int main(void)
