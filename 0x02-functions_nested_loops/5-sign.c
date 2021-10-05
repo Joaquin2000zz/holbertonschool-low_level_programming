@@ -9,12 +9,12 @@
 int print_sign(int n)
 {
 
-	if (n <= 57 || n >= 49)
+	if (n <= 99 || n >= 1)
 	{
 		_putchar('+');
 		return (1);
 	}
-	else if (n == 48)
+	else if (n == 0)
 	{
 		_putchar('0');
 		return (0);
