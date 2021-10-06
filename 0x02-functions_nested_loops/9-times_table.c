@@ -8,19 +8,18 @@
 
 void times_table(void)
 {
-	int a;
-	int b;
+	int filas;
+	int columnas;
+	int productomatriz;
+
+	productomatriz = filas * columnas;
 	
-	for (a = 0 ; a <= 10 ; a++)
-	_putchar('0');
-	_putchar('\n');
-	for (b = 0 ; b <= 10 ; b++)
-	_putchar(b + 48);
-	_putchar('\n');
-	for (b = 0 ; b <= 20 ; b++)
-	_putchar(b * 2 + 48);
-	_putchar('\n');
-	for (b = 0 ; b <= 10 ; b++)
-	_putchar(b * 2 + 48);
-	_putchar('\n');
+	for (filas = 0 ; filas < 10 ; filas++)
+	{
+		for (columnas = 0 ; columnas < 10 ; columnas++)
+		{
+			_putchar(fila);
+			_putchar(columna);
+		}
+	}
 }
