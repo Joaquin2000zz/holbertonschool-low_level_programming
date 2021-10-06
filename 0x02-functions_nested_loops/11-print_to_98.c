@@ -37,5 +37,5 @@ void print_to_98(int i)
 			}
 		}
 	}
-	putchar('\n');
+putchar('\n');
 }
