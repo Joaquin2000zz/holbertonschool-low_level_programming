@@ -1,31 +1,27 @@
 #include "main.h"
 
 /**
-* main - check the code
+* main - 
 *
-* Return: Always 0.
+* Return: 
 */
 void jack_bauer(void)
-{
-
 	int minutes;
 	int hours;
-	
-	
-	for (hours = 0 ; hours <= 59; hours++)
+
+	for (hours = 0 ; hours <= 23 ; hours++)
 	{
-		for (minutes = 0 ; minutes <= 23; minutes++)
+		for (minutes = 0 ; minutes <= 60 ; minutes++)
 		{
-		if (minutes < 60)
-			{
-				_putchar(':');
-				_putchar(((hours / 10) % 10) + 48);
-				_putchar((hours % 10) + 48);
-				_putchar('\n');
-				_putchar(((minutes / 10) % 10)+ 48);
-				_putchar((minutes % 10) + 48);
-	
-		  	}
-		}	
+				putchar(((ii / 10) % 10) + 48);
+				putchar(((ii) % 10) + 48);
+				putchar(' ');
+				putchar(((i / 10) % 10) + 48);
+				putchar(((i) % 10) + 48);
+				if (hours < 24)
+				{
+					putchar('\n');
+				}
+			}
+		}
 	}
-}
