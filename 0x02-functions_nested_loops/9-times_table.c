@@ -8,15 +8,15 @@
 
 void times_table(void)
 {
-	int filas;
+	int fila;
 	int columnas;
 	int productomatriz;
 
-	productomatriz = filas * columnas;
+	productomatriz = fila * columna;
 	
-	for (filas = 0 ; filas < 10 ; filas++)
+	for (fila = 0 ; fila < 10 ; fila++)
 	{
-		for (columnas = 0 ; columnas < 10 ; columnas++)
+		for (columna = 0 ; columna < 10 ; columna++)
 		{
 			_putchar(fila);
 			_putchar(columna);
