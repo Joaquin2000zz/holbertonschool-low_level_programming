@@ -23,9 +23,7 @@ void print_to_98(int i)
 			}
 		}
 	}
-	else if
-	{
-	if (i > 98)
+	else if (i > 98)
 	{
 		for (; i >= 98 ; i--)
 		{
@@ -38,7 +36,6 @@ void print_to_98(int i)
 				printf("%d", i);
 			}
 		}
-	}
 	}
 putchar('\n');
 }
