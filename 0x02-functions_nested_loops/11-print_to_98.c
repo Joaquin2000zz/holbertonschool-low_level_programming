@@ -23,7 +23,7 @@ void print_to_98(int i)
 			}
 		}
 	}
-	else is
+	else if
 	{
 	if (i > 98)
 	{
