@@ -11,8 +11,6 @@ void times_table(void)
 	int fila;
 	int columna;
 	int productomatriz;
-
-	productomatriz = fila * columna;
 	
 	for (fila = 0 ; fila < 10 ; fila++)
 	{
@@ -25,6 +23,7 @@ void times_table(void)
 			}
 			else if (fila != 0)
 			{
+				productomatriz = fila * columna;
 				_putchar(fila);
 				_putchar(productomatriz);
 			}
