@@ -9,7 +9,7 @@
 void times_table(void)
 {
 	int fila;
-	int columnas;
+	int columna;
 	int productomatriz;
 
 	productomatriz = fila * columna;
