@@ -21,7 +21,7 @@ void jack_bauer(void)
 				_putchar(((minutes) % 10) + 48);
 				if (hours < 24)
 				{
-					putchar('\n');
+					_putchar('\n');
 				}
 			}
 		}
