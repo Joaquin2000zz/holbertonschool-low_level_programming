@@ -26,7 +26,7 @@ void times_table(void)
 			else if (fila != 0)
 			{
 				_putchar(fila);
-				_putchar(productomatriz;)
+				_putchar(productomatriz);
 			}
 		}
 	}
