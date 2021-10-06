@@ -22,7 +22,7 @@ void print_to_98(int i)
 				printf("%d", i);
 			}
 		}
-		putchar('\n');
+		putchar(0);
 	}
 	if (i >= 98)
 	{
@@ -37,6 +37,6 @@ void print_to_98(int i)
 				printf("%d", i);
 			}
 		}
-		putchar('\n');
+		putchar(0);
 	}
 }
