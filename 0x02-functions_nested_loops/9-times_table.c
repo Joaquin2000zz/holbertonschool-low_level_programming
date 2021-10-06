@@ -12,21 +12,26 @@ void times_table(void)
 	int columna;
 	int productomatriz;
 	
-	for (fila = 0 ; fila < 10 ; fila++)
+	for (columna = 0 ; columna < 10 ; columna++)
 	{
-		for (columna = 0 ; columna < 10 ; columna++)
+		for (fila = 0 ; fila < 10 ; fila++)
 		{
-			if (fila == 0)
+			productomatriz = fila * columna;
+			if (productomatriz >= 10)
 			{
-				_putchar(fila + 48);
-				_putchar(columna + 48);
+			_putchar((productomatriz / 10 % 10) + 48);
 			}
-			else if (fila != 0)
+			if (productomatriz < 10 && fila > 0) 
 			{
-				productomatriz = fila * columna;
-				_putchar(fila + 48);
-				_putchar(productomatriz + 48);
+				_putchar(' ');
+			}	
+				_putchar((productomatriz % 10 ) + 48);
+			if (fila < 9)
+			{
+			_putchar(',');
+			_putchar(' ');
 			}
 		}
+	_putchar('\n');
 	}
 }
