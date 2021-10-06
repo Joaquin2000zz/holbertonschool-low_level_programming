@@ -18,14 +18,14 @@ void times_table(void)
 		{
 			if (fila == 0)
 			{
-				_putchar(fila);
-				_putchar(columna);
+				_putchar(fila + 48);
+				_putchar(columna + 48);
 			}
 			else if (fila != 0)
 			{
 				productomatriz = fila * columna;
-				_putchar(fila);
-				_putchar(productomatriz);
+				_putchar(fila + 48);
+				_putchar(productomatriz + 48);
 			}
 		}
 	}
