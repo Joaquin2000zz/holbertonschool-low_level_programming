@@ -17,10 +17,10 @@ void times_table(void)
 	for (b = 0 ; b <= 10 ; b++)
 	_putchar(b + 48);
 	_putchar('\n');
-	for (b = 0 ; c <= 20 ; b++)
+	for (b = 0 ; b <= 20 ; b++)
 	_putchar(b * 2 + 48);
 	_putchar('\n');
-	for (b = 0 ; d <= 10 ; b++)
+	for (b = 0 ; b <= 10 ; b++)
 	_putchar(b * 2 + 48);
 	_putchar('\n');
 }
