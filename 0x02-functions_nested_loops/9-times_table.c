@@ -18,8 +18,16 @@ void times_table(void)
 	{
 		for (columna = 0 ; columna < 10 ; columna++)
 		{
-			_putchar(fila);
-			_putchar(columna);
+			if (fila == 0)
+			{
+				_putchar(fila);
+				_putchar(columna);
+			}
+			else if (fila != 0)
+			{
+				_putchar(fila);
+				_putchar(productomatriz;)
+			}
 		}
 	}
 }
