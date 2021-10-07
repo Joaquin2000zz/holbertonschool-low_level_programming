@@ -2,7 +2,7 @@
 
 /**
 * print_line - print _
-*
+* @n: gives the limit of the for
 * Return: Always 0.
 */
 void print_line(int n)
