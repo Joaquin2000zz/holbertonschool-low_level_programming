@@ -3,7 +3,7 @@
 /**
 * print_numbers - prints the numbers for 0 at 9
 *
-* Return: Always 0.
+* Return: boolean value.
 */
 void print_numbers(void)
 {
