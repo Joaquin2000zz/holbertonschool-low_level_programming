@@ -20,7 +20,7 @@ if (n > 0)
 	for (a = 0; a < b; a++)
 	{
 		_putchar(' ');
-		
+
 	}
 	_putchar(92);
 	_putchar('\n');
