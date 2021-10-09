@@ -29,6 +29,6 @@ if (size >= 1)
 else
 {
 _putchar('\n');
-_putchar('\n');
 }
+_putchar('\n');
 }
