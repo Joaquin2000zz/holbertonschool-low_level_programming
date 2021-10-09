@@ -18,14 +18,15 @@ if (size >= 1)
 	}
 	for (c = 0; c < (size - b); c++)
 	_putchar(' ');
-	
+
 	for (d = 0; d < b; d++)
 	_putchar('#');
 	if (b < size)
 		_putchar('\n');
 	}
 
-}else
+}
+else
 {
 _putchar('\n');
 _putchar('\n');
