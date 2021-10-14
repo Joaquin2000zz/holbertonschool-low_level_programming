@@ -9,7 +9,11 @@
 
 void print_array(int *a, int n)
 {
-	for (n = 0; a[n] != ('\0'); n++)
+	int i;
+
+	for (i = 0; a[n] != '\0'; i++)
+			n = i;
+	for (n = 0; a[n] <= i; n++)
 		printf("%d, ", a[n]);
 	putchar('\n');
 }
