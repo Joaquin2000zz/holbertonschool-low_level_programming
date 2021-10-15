@@ -2,9 +2,8 @@
 
 /**
 * _strcmp - a funtion that compare strings
-* @s1: first string to compare 
+* @s1: first string to compare
 * @s2: second string to compare
-* @n: the variable that determine the length of the string
 * Return: the substraction within the diferent position compared in two strings
 */
 
@@ -18,6 +17,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		i++;
 	}
-		valresult = s1[i] - s2[i];
+	valresult = s1[i] - s2[i];
+
 	return (valresult);
 }
