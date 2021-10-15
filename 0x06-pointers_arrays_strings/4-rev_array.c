@@ -9,19 +9,20 @@
 
 void reverse_array(int *a, int n)
 {
-	int i, aux;
+	int i, auxstart, auxend;
 
 	i = 0;
-
+	auxend = (n - 1);
 	if (n > 0)
 	{
 	while (i < (n / 2))
 	{
-		n--;
-		aux = a[i];
-		a[i] = a[n];
-		a[n] = aux;
+		
+		auxstart = a[i];
+		a[i] = a[auxend];
+		a[auxend] = auxstart;
 		i++;
+		auxend--;
 	}
 	}
 }
