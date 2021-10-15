@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* _strcat - the funtion that adds a specific part of a string to other
-* @dest: the variable to be joined with src
-* @src: the variable to be joined with dest
-* @n: the variable that determine the part to be used in the merge of dest and src
+* _strncat - funtion that adds a specific part of a string to other
+* @dest: variable to be joined with src
+* @src: variable to be joined with dest
+* @n: variable that determine the part used in the merge of dest and src
 * Return: dest and src merged.
 */
 
