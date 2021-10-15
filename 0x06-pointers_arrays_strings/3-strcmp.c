@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* _strcpy - a funtion that copy strings
-* @dest: the variable that saves the copied string
-* @src: the variable that brings the string that you need to copy
+* _strcmp - a funtion that compare strings
+* @s1: first string to compare 
+* @s2: second string to compare
 * @n: the variable that determine the length of the string
-* Return: src copied in dest
+* Return: the substraction within the diferent position compared in two strings
 */
 
 int _strcmp(char *s1, char *s2)
