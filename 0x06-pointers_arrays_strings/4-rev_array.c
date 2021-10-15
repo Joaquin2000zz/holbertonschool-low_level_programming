@@ -13,6 +13,8 @@ void reverse_array(int *a, int n)
 
 	i = 0;
 
+	if (n > 0)
+	{
 	while (i < (n / 2))
 	{
 		n--;
@@ -21,5 +23,5 @@ void reverse_array(int *a, int n)
 		a[n] = aux;
 		i++;
 	}
-	
+	}
 }
