@@ -19,7 +19,7 @@ char *leet(char *p)
 		{
 			if (p[i] == let[j] || p[i] == LET[j])
 			{
-				p[i] = num[j];
+				p[i] = num[j] + 48;
 			}
 			j++;
 		}
