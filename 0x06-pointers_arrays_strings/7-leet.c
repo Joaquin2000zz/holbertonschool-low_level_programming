@@ -2,27 +2,27 @@
 
 /**
 * leet - change in specific cases lowercase letters to numb3rz.
-* @p: pointer that brings the string
+* @string: pointer that brings the string
 * Return: the string obtained but with some ch4ng3z in specific cases.
 */
 
-char *leet(char *p)
+char *leet(char *string)
 {
 	int i, j;
 	int num[5] = {4, 3, 0, 7, 1};
 	char let[5] = {'a', 'e', 'o', 't', 'l'};
-	char LET[5] = {'A', 'E', 'O', 'T', 'L'}
+	char LET[5] = {'A', 'E', 'O', 'T', 'L'};
 
-	for (i = 0; p[i] != 0; i++)
+	for (i = 0; string[i] != 0; i++)
 	{
 		for (j = 0; num[j] != 0; j++)
 		{
-			if (let[j] == p[i] || LET[j] == p[i])
+			if (let[j] == string[i] || LET[j] == string[i])
 			{
-				p[i] = num[j] + 48;
+				string[i] = num[j] + 48;
 			}
 		}
-	}
+}
 
-	return (p);
+	return (string);
 }
