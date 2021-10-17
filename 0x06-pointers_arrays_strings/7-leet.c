@@ -8,22 +8,21 @@
 
 char *leet(char *p)
 {
-	int i, j = 0;
+	int i, j;
 	int num[5] = {4, 3, 0, 7, 1};
 	char let[5] = {'a', 'e', 'o', 't', 'l'};
-	char LET[5] = {'A', 'E', 'O', 'T', 'L'};
+	char LET[5] = {'A', 'E', 'O', 'T', 'L'}
 
-	while (p[i] != 0)
+	for (i = 0; p[i] != 0; i++)
 	{
-		while (j <= 4)
+		for (j = 0; num[j] != 0; j++)
 		{
-			if (p[i] == let[j] || p[i] == LET[j])
+			if (let[j] == p[i] || LET[j] == p[i])
 			{
 				p[i] = num[j] + 48;
 			}
-			j++;
 		}
-		i++;
 	}
+
 	return (p);
 }
