@@ -9,7 +9,7 @@
 char *leet(char *string)
 {
 	int i, j;
-	int num[5] = {4, 3, 0, 7, 1};
+	char num[5] = {'4', '3', '0', '7', '1'};
 	char let[5] = {'a', 'e', 'o', 't', 'l'};
 	char LET[5] = {'A', 'E', 'O', 'T', 'L'};
 
@@ -19,7 +19,7 @@ char *leet(char *string)
 		{
 			if (let[j] == string[i] || LET[j] == string[i])
 			{
-				string[i] = num[j] + 48;
+				string[i] = num[j];
 			}
 		}
 }
