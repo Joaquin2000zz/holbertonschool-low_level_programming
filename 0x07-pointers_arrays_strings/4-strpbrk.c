@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* main - check the code
-*
-* Return: Always 0.
+* _strpbrk - find a char equal and show the s string strarting in the match
+* @s: the string to show
+* @accept: the string to compare with the s one
+* Return: the string s starting in the position from the matched char.
 */
 
 char *_strpbrk(char *s, char *accept)
