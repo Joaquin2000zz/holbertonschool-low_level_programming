@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_chessboard - check the code
+* print_chessboard - print a chessboard
 * @a: gives the content of the pointers
 * Return: the pointers showing a "chessboard".
 */
