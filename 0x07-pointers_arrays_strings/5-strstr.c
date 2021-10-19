@@ -1,31 +1,38 @@
 #include "main.h"
 
 /**
-* main - check the code
-*
+* _strstr - check the code
+*@haystack: 
+*@needle:
 * Return: Always 0.
 */
 
-unsigned int _strspn(char *s, char *accept)
+char * _strstr(char *haystack, char *needle)
 {
-	int i, j;
-	unsigned int v = 0;
+	int p1 = 0, p2 = 0;
 
-	for (i = 0; s[i] != 0; i++)
-	{
-		for (j = 0; accept[j] != 0; j++)
+	if (*needle == 0)
+		return (haystack);
+	else
+	{	
+		while (haystack[p1])
 		{
-			if (s[i] == accept[j])
-			{	
-				v++;
-			}
-			else
+			while(needle[p2] && haystack[p1] == needle[0])
 			{
-				break;	
+				if (haystack[p2 + p1] == needle[p2])
+					p2++;
+				else
+					break;
 			}
-		}
-		
-	}
 	
-	return (v);
+		if (needle[p2])
+		{
+			p1++;
+			p2 = 0;
+		}
+		else
+			return (haystack + p1);	
+		}
+	}
+		return (0);
 }
