@@ -1,17 +1,16 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _pow_recursion - make the power of x y times
- * @x: value to do to do the power
- * @y: y times that you do the power
- * Return: the calculation
+ * _pow_recursion - writes the character c to stdout
+ * @x: The character to print
+ * @y: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 int _pow_recursion(int x, int y)
 {
 	if (y > 0)
-		return (x * _pow_recursion(x, y--));
+		return (x * _pow_recursion(x, --y));
 	else if (y == 0)
 		return (1);
 	else
