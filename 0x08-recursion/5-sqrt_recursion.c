@@ -1,11 +1,13 @@
 #include "main.h"
+
 /**
  * auxfuntion - funtion that you need to calculate the sqrt
  * @n: the number that you need to make the sqrt
  * @i: the result
  * Return: the calculation
  */
-int auxfuntion(int n, i)
+
+int auxfuntion(int n, int i)
 {
 	if (i *i == n)
 		return (i);
@@ -14,6 +16,7 @@ int auxfuntion(int n, i)
 	else
 		return (auxfuntion(n, (i + 1)));
 }
+
 /**
  * _sqrt_recursion - funtion that calculate the sqrt of a number
  * @n: the number that you need to make the sqrt
@@ -22,10 +25,7 @@ int auxfuntion(int n, i)
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-	{
 		return (-1);
-	}
 	else
-	{
-	return (auxfuntion(n, 0));
+		return (auxfuntion(n, 0));
 }
