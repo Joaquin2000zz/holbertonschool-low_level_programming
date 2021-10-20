@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * auxfuntion - funtion that you need to calculate the sqrt
+ * auxfunction - funtion that you need to calculate the sqrt
  * @n: the number that you need to make the sqrt
  * @i: the result
  * Return: the calculation
