@@ -4,6 +4,7 @@
  * main - print the number of argument passed into it
  * @argc: variable that brings the argv long
  * @argv: arguments of the program
+ * Return: 0
  */
 
 int main(int argc, char *argv[]__attribute__((unused)))
