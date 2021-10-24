@@ -27,10 +27,13 @@ int main(int argc, char *argv[])
 		change = atoi(argv[1]);
 		while (change > 0)
 		{
-			if (change < coins[j] && change != 0)
+			if (change < coins[j])
 				j++;
-			change = change - coins[j];
-			i++;
+			if (change >= coins[j])
+			{
+				change = change - coins[j];
+				i++;
+			}
 		}
 		printf("%d\n", i);
 		return (0);
