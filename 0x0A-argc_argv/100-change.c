@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (change <= 0)
+	else if (atoi(argv[1]) <= 0)
 	{
 		printf("0\n");
 		return (0);
@@ -26,33 +26,35 @@ int main(int argc, char *argv[])
 	{
 		change = atoi(argv[1]);
 		
-		while (change < 1)
+		while (change != 0)
 		{
-
-		
-			if ((change % a) == 0 && > b)
+			if (change >= a)
 			{
 				change = change - a;
 				i++;
 			}
-			else if ((change % b) == 0 && change < a)
+			else if (change >= b && change < a)
 			{
 				i++;
 				change = change - b;
 			}
-			else if ((change % c) == 0 && change < b)
+			else if (change >= c && change < b)
 			{
 				i++;
 				change = change - c;
 			}
-			else if ((change % d) == 0 && change < c)
+			else if (change >= d && change < c)
 			{
 				i++;
-				((change % e) == 0 && change < d)
+				change = change - d;
 			}
-		}
-		
-		printf("%d", i);
+			else if	(change >= e && change < d)
+			{
+				i++;
+				change = change - e;
+			}
+		}	
+		printf("%d\n", i);
 		return (0);
 	}	
 }
