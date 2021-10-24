@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a = 25, b = 10, c = 5, d = 2, e = 1, change = 0, i = 0;
+	int coins[5] = {25, 10, 5, 2, 1}, change = 0, i = 0, j= 0;
 
 	if (argc != 2)
 	{
@@ -25,33 +25,12 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-		while (change != 0)
+		while (change > 0)
 		{
-			if (change >= a)
-			{
-				change = change - a;
-				i++;
-			}
-			else if (change >= b && change < a)
-			{
-				i++;
-				change = change - b;
-			}
-			else if (change >= c && change < b)
-			{
-				i++;
-				change = change - c;
-			}
-			else if (change >= d && change < c)
-			{
-				i++;
-				change = change - d;
-			}
-			else if	(change >= e && change < d)
-			{
-				i++;
-				change = change - e;
-			}
+			if (change < coins[j] && change != 0)
+				j++;
+			change = change - coins[j];
+			i++;
 		}
 		printf("%d\n", i);
 		return (0);
