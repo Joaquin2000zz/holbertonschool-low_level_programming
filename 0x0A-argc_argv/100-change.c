@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ * main - program that prints the minimum number of coins to make change
+ * @argc: long of the argv
+ * @argv: arguments of the program
+ * Return: 0 if everything i'ts ok and 1 in errors
  */
 
 int main(int argc, char *argv[])
@@ -25,65 +25,34 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-		while (change >= a)
+		
+		while (change < 1)
 		{
-			i++;
-			change = change - a;
-		}
-		if (change == 0)
-		{
-			printf("%d\n", i);
-			return (0);
-		}
-		else
-		{
-			while (change >= b && change < a)
+
+		
+			if ((change % a) == 0 && > b)
+			{
+				change = change - a;
+				i++;
+			}
+			else if ((change % b) == 0 && change < a)
 			{
 				i++;
 				change = change - b;
 			}
-			if (change == 0)
+			else if ((change % c) == 0 && change < b)
 			{
-				printf("%d\n", i);
-				return (0);
+				i++;
+				change = change - c;
 			}
-			else
+			else if ((change % d) == 0 && change < c)
 			{
-				while (change >= c && change < b)
-				{
-					i++;
-					change = change - c;
-				}
-				if (change == 0)
-				{
-					printf("%d\n",i);
-					return (0);
-				}
-				else
-				{
-					while (change >= d && change < c)
-					{
-						i++;
-						change = change - d;
-					}
-					if (change == 0)
-					{
-						printf("%d\n", i);
-						return (0);
-					}
-					else
-					{
-						while (change >= e && change < d)
-						{
-							i++;
-							change = change - e;
-						}
-						printf("%d\n", i);
-						return (0);
-					}
-				}
+				i++;
+				((change % e) == 0 && change < d)
 			}
 		}
 		
-	}
+		printf("%d", i);
+		return (0);
+	}	
 }
