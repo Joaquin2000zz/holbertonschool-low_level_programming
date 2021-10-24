@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-		
 		while (change != 0)
 		{
 			if (change >= a)
@@ -53,8 +52,8 @@ int main(int argc, char *argv[])
 				i++;
 				change = change - e;
 			}
-		}	
+		}
 		printf("%d\n", i);
 		return (0);
-	}	
+	}
 }
