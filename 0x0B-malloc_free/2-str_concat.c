@@ -11,10 +11,11 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i = 0, j = 0;
 	char *ar;
+
 	if (s1 == 0)
-		return (0);
+		return ("");
 	if (s2 == 0)
-		return (0);
+		return ("");
 
 	ar = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 	if (ar == 0)
