@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * array_range - Write a function that creates an array of integers.
+ * array_range - function that creates an array of integers.
  * @min: the min value of the array
  * @max: the max value of the array
  *
