@@ -1,4 +1,5 @@
 #include <stdlib.h>
+int ifmalloc(char *s1, char *s2, unsigned int n);
 
 /**
  * _strlen - count the large of a string
