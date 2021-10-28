@@ -2,16 +2,17 @@
 
 /**
  * _strlen - count the large of a string
- *
+ * @c: the string
  * Return: Always 0.
  */
 
-unsigned int _strlen(char *c unsigned int n)
+unsigned int _strlen(char *c)
 {
 	unsigned int i;
 
 	for (i = 0; c[i] != 0)
 		;
+
 	return (i);
 }
 
