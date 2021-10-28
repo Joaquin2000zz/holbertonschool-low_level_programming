@@ -13,7 +13,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0, j = 0;
 	char *ar;
 	
-	if (s1 == 0)
+	if (s1 == '\0')
 		s1 = "";
 
 	if (s2 == '\0')
