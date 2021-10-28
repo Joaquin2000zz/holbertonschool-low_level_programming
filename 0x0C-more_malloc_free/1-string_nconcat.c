@@ -38,13 +38,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	if (_strlen(s2) > n)
+	if (_strlen(s2) < n)
 	{
-		ar = malloc((_strlen(s1) + n + 1) * sizeof(char));
+		ar = malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
 	}
 	else
 	{
-		ar = malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
+		ar = malloc((_strlen(s1) + n + 1) * sizeof(char));
 	}
 
 	if (ar == 0)
