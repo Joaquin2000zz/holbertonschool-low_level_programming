@@ -10,8 +10,8 @@ unsigned int _strlen(char *c)
 {
 	unsigned int i;
 
-	for (i = 0; c[i] != 0; i++);
-
+	for (i = 0; c[i] != 0; i++)
+	{}
 	return (i);
 }
 
@@ -22,21 +22,26 @@ unsigned int _strlen(char *c)
  * @n: the first n characters of the second string that you gonna concatenate
  * Return: the concatenated string.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n )
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, j = 0;
 	char *ar;
-	
+
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 
- 	if (s2 == NULL)
+	if (s2 == NULL)
+	{
 		s2 = "";
+	}
 
-		ar = malloc((_strlen(s1) + n + 1) * sizeof(char));
-
+	ar = malloc((_strlen(s1) + n + 1) * sizeof(char));
 	if (ar == 0)
+	{
 		return (0);
+	}
 
 	while (i < (_strlen(s1) + _strlen(s2) + 1))
 	{
@@ -53,5 +58,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n )
 	}
 	return (ar);
 }
-
-
