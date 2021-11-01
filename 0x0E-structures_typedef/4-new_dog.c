@@ -34,9 +34,10 @@ char *_strdup(char *str)
 }
 /**
  * new_dog - asign values of a structure in allocated space
- * @name: - dog's of the new dog
- * @age: - dog's age
- * @owner: - dog's best friend
+ * @name: dog's of the new dog
+ * @age: dog's age
+ * @owner: dog's best friend
+ * Return: new dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
