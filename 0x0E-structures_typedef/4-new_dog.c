@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 
 /**
@@ -6,27 +7,27 @@
  * @str: a pointer that brings the string to print
  * Return: Always 0.
  */
-char *_strdup(char *str)
-{
-	unsigned int i = 0, j = 0;
-	char *ar = 0;
-
-	if (str == 0)
-		return (0);
-
-	while (str[i] != 0)
-		i++;
-	ar = malloc(i + 1 * sizeof(char));
-	if (ar == 0)
-		return (0);
-
-	while (str[j] != 0)
-	{
-		ar[j] = str[j];
-		j++;
-	}
-	return (ar);
-}
+/**char *_strdup(char *str)
+*{
+*	unsigned int i = 0, j = 0;
+*	char *ar = 0;
+*
+*	if (str == 0)
+*		return (0);
+*
+*	while (str[i] != 0)
+*		i++;
+*	ar = malloc(i + 1 * sizeof(char));
+*	if (ar == 0)
+*		return (0);
+*
+*	while (str[j] != 0)
+*	{
+*		ar[j] = str[j];
+*		j++;
+*	}
+*	return (ar);
+}*/
 /**
  * new_dog - asign values of a structure in allocated space
  * @name: - dog's of the new dog
@@ -41,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 
 	if (name)
-		d->name = _strdup(name);
+		d->name = strdup(name);
 	else
 	{
 		free(d);
@@ -49,7 +50,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	if (owner)
-		d->owner = _strdup(owner);
+		d->owner = strdup(owner);
 	else
 	{
 		free(d->name);
