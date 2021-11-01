@@ -12,7 +12,7 @@ void print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
-	
+
 	if (d != 0)
 	{
 		if (d->name == NULL)
