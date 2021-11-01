@@ -7,27 +7,27 @@
  * @str: a pointer that brings the string to print
  * Return: Always 0.
  */
-/**char *_strdup(char *str)
-*{
-*	unsigned int i = 0, j = 0;
-*	char *ar = 0;
-*
-*	if (str == 0)
-*		return (0);
-*
-*	while (str[i] != 0)
-*		i++;
-*	ar = malloc(i + 1 * sizeof(char));
-*	if (ar == 0)
-*		return (0);
-*
-*	while (str[j] != 0)
-*	{
-*		ar[j] = str[j];
-*		j++;
-*	}
-*	return (ar);
-}*/
+char *_strdup(char *str)
+{
+	unsigned int i = 0, j = 0;
+	char *ar = 0;
+
+	if (str == 0)
+		return (0);
+
+	while (str[i] != 0)
+		i++;
+	ar = malloc(i + 1 * sizeof(char));
+	if (ar == 0)
+		return (0);
+
+	while (str[j] != 0)
+	{
+		ar[j] = str[j];
+		j++;
+	}
+	return (ar);
+}
 /**
  * new_dog - asign values of a structure in allocated space
  * @name: - dog's of the new dog
@@ -43,14 +43,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (0);
 
-	d->name = strdup(name);
+	d->name = _strdup(name);
 	if (!d->name)
 	{
 		free(d);
 		return (NULL);
 	}
 
-		d->owner = strdup(owner);
+		d->owner = _strdup(owner);
 	if (!d->owner)
 	{
 		free(d->name);
