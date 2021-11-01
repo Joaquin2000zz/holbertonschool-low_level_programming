@@ -1,6 +1,6 @@
-#ifndef _PI_
-#define _PI_
+#ifndef __PI__
+#define __PI__
 
 #define PI 3.1415926535
 
-#endif /* _PI_ */
+#endif /* __PI__ */
