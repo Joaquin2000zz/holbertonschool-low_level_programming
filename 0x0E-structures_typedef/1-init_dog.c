@@ -1,7 +1,11 @@
 #include "dog.h"
 
 /**
- * main - check the code
+ * init_dog - a function that initialize a variable of type struct dog
+ * @d: the name of the structure
+ * @name: the name of the doggo
+ * @age: the doggo's age
+ * @owner: the owner's age
  *
  * Return: Always 0.
  */
