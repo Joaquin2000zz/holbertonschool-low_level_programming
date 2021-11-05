@@ -39,7 +39,6 @@ void print_all(const char * const format, ...)
 					printf("(nil)%s", separator);
 					break;
 				}
-				else
 					printf("%s%s", auxs, separator);
 			break;
 		}
