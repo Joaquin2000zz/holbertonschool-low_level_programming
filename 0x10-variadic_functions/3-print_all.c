@@ -10,8 +10,8 @@
 void print_all(const char * const format, ...)
 {
 	int type = 0, counter = 0;
-	va_list kind_of;
 	char *auxs, *separator = ", ";
+	va_list kind_of;
 
 	va_start(kind_of, format);
 	while (format && format[counter])
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)%s", separator);
 					break;
 				}
-					printf("%s%s", auxs, separator);
+				printf("%s%s", auxs, separator);
 			break;
 		}
 		type++;
