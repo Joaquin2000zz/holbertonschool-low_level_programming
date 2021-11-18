@@ -48,7 +48,12 @@ unsigned int binary_to_uint(const char *b)
 	while (i >= 0)
 	{
 		if (b[i] == '1')
-			num += _pow(base, j);
+		{
+			if (j == 0)
+				num++;
+			else
+				num += _pow(base, j);
+		}
 		j++;
 		i--;
 	}
