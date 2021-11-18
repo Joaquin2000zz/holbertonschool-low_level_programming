@@ -34,12 +34,12 @@ unsigned int binary_to_uint(const char *b)
 
 
 	if (!b)
-		return (num);
+		return (0);
 
 	while (b[i])
 	{
 		if (b[i] != '1' && b[i] != '0')
-			return (num);
+			return (0);
 		i++;
 	}
 	while (i >= 0)
