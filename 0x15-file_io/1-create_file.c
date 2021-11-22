@@ -4,17 +4,17 @@
  * create_file - creates a file
  * @filename: the name of the file to print
  * @text_content: the file's content
- * Return: the size of the file readed
+ * Return: -1 in error and 1 in success
  */
 
 int create_file(const char *filename, char *text_content)
 {
 	int fileopen, fileread, filewrite;
 
+	fileopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+
 	if (!filename)
 		return (-1);
-
-	fileopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (fileopen == -1)
 	{
