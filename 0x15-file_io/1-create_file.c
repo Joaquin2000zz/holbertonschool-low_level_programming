@@ -14,9 +14,6 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	if (!text_content)
-		return (-1);
-
 	fileopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (fileopen == -1)
@@ -25,6 +22,11 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
+	if (!text_content)
+	{
+		close(fileopen);
+		return (-1);
+	}
 	for (fileread = 0; text_content[fileread]; fileread++)
 		;
 
