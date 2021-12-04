@@ -1,12 +1,13 @@
 #include <string.h>
 #include <stdio.h>
+#include "main.h"
 
 extern char **environ;
 
 char *_getenv(const char *name)
 {
 	char **s = environ, *aux, **list, *getpath;
-	int i = 0, j = 0;
+	int i = 0;
 
 		while (s[i])
                 {
@@ -19,19 +20,7 @@ char *_getenv(const char *name)
                                 break;
 		}
 
-	list[j] = strtok(aux, "=");
-	
-	while (list[j])
-        {
-                j++;
-
-                list[j] = strtok(NULL, "=");
-
-                if (!list[j])
-                       break;
-        }
-
-        list[j] = NULL;
+	list = tokenator(aux, "=");
 	
 	getpath = list[1];
 

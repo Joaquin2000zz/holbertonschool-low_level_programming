@@ -45,6 +45,7 @@ char *_getenv(const char *name)
 	getpath = list[1];
 
 	printf("%s\n", getpath);
+	printf("antes de llamar a get route\n");
 	getroute(getpath);
 	return (getpath);
 }
@@ -62,13 +63,11 @@ int getroute(char *getpath)
 	int i = 0, j = 0;
 
 	list[j] = strtok(aux, ":");
-
+	printf("antes de entrar al while del getroute\n");
 	while (list[j])
 	{
 		j++;
-
 		list[j] = strtok(NULL, ":");
-
 		if (!list[j])
 			break;
 	}
@@ -78,6 +77,7 @@ int getroute(char *getpath)
 	while (list[i])
 	{
 		printf("%s", list[i]);
+		path_linked_list(&head, list[i]);
 		i++;
 	}
 
