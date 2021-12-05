@@ -1,92 +1,83 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int freezer(char *str);
+
+
+/**
+ * _strdup - returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter
+ *
+ * @str: string to copy
+ *
+ * Return: *ptr to the duplicate string or NULL if it failed
+ */
+char *_strdup(char *str)
+{
+	unsigned int pos, len;
+	char *dup;
+
+	if (!str)
+		return (NULL);
+
+	for (len = 0; str[len] != 0;)
+		len++;
+
+	dup = (char *)malloc((sizeof(char) * len + 1));
+
+	if (dup == NULL)
+		return (NULL);
+
+	for (pos = 0; pos <= len; pos++)
+	{
+		dup[pos] = str[pos];
+	}
+	return (dup);
+}
+
 char **_strtok(char *str, char separator)
 {
-	char **tokList = malloc(1024), *auxToc;
-	int i = 0, j = 0, tokLen = 0, k = 0, y = 0, exit = 0, e = 0;
+	char *tokList[1024], **tokListReturn, auxTok[1024];
+	int exit = 0, i = 0, j = 0, k = 0, y = 0, e = 0, tokLen = 0;
 
-	printf("entre a la funcion con string :%s y separador:%c \n", str, separator);
-	for (i = 0; exit == 0; i++)
+	for(i = 0; exit == 0; i++)
 	{
-		printf("--------------------------\n");
-		printf("entre al for que recorre el string con pos: str[%d]\n", i);
-		if (str[i] != separator)
+		if (str [i] != separator)
 		{
 			tokLen++;
-			printf("le sume a tokLen: %d", tokLen);
-			printf("--------------------------\n");
 		}
 		if (str[i] == separator)
 		{
-			//tokLen++;
-			auxToc = malloc(tokLen);
-			 printf("le sume a tokLen: %d", tokLen);
-                         printf("--------------------------\n");
-			 printf("voy a hacer j = i(%d) - tokLen(%d)\n",i, tokLen);
 			j = i - tokLen;
-			 printf("j vale: %d\n", j);
-			 printf("--------------------------\n");
 			for (y = 0; y < tokLen; y++)
 			{
-				printf("entre al for q rellena filas\n");
-				auxToc[y] = str[j];
-				//tokList[k][y] = str[j];
-				printf("aux[%d] = %c\n", y, auxToc[y]);
+				auxTok[y] = str[j];
 				j++;
 			}
-			tokList[k] = auxToc;
-			printf("tokList[%d] %s\n", k, tokList[k]);
-			 printf("--------------------------\n");
-			k++;
-			free(auxToc);
+			tokList[k] = _strdup(auxTok);
+			freezer(auxTok);
 			tokLen = 0;
+			k++;
 		}
-		printf("--------------------------\n");
-		if (k = 2)
-		{
-			for (e = 0; e < 2; e++)
-                                printf("lista antes del if del ultimo string tokList[%d] = %s\n", e, tokList[e]);
-                        printf("--------------------------\n");
-		}
+
 		if (!str[i + 1])
 		{
-			//tokLen++;
-			 printf("le sume a tokLen: %d", tokLen);
-                         printf("--------------------------\n");
-                         printf("voy a hacer j = i(%d) - tokLen(%d)\n",i, tokLen);
 			j = (i + 1) - tokLen;
-			 printf("j vale: %d\n", j);
-                         printf("--------------------------\n");
+
 			for (y = 0; y < tokLen; y++)
 			{
-				//tokList[k][y] = str[j];
-				printf("entre al for q rellena ultoma fila\n");
-				auxToc[y] = str[j];
-				printf("aux[%d] = %c\n", y, auxToc[y]);
+				auxTok[y] = str[j];
 				j++;
-			}printf("--------------------------\n");
-                         for (e = 0; e < 2; e++)
-                                printf("lista dentro del for de la ultima linea de la funcion el la posicion tokList[%d] = %s\n", e, tokList[e]);
-                        printf("--------------------------\n");
-			tokList[k] = auxToc;
-			printf("tokList[%d] %s\n", k, tokList[k]);
-			 printf("--------------------------\n");
-			 for (e = 0; tokList[e]; e++)
-                		printf("lista dentro del for de la ultima linea de la funcion el la posicion tokList[%d] = %s\n", e, tokList[e]);
-        		printf("--------------------------\n");
-			k++;
-			tokList[k] = 0;
+			}
+			tokList[k] = _strdup(auxTok);
+			freezer(auxTok);
+
+			tokList[k + 1] = 0;
 			exit++;
 		}
-		for (e = 0; tokList[e]; e++)
-                	printf("lista fuera del for de la ulima fila dentro de la funcion el la posicion tokList[%d] = %s\n", e, tokList[e]);
-        	printf("--------------------------\n");
 	}
-	for (e = 0; tokList[e]; e++)
-		printf("lista dentro de la funcion el la posicion tokList[%d] = %s\n", e, tokList[e]);
-	printf("--------------------------\n");
-	return (tokList);
+	tokListReturn = tokList;
+	return (tokListReturn);
 }
 
 int main(void)
@@ -99,6 +90,18 @@ int main(void)
 	{	
 		printf("------------------------------------\n");
 		printf("%s\n",list[i]);
+	}
+	return (0);
+}
+
+int freezer(char *str)
+{
+	int i;
+	if (!str)
+		return(-1);
+	for (i = 0; str[i]; i++)
+	{
+		str[i] = 0;
 	}
 	return (0);
 }
