@@ -1,3 +1,4 @@
+#include "main.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,21 +29,9 @@ char *_getenv(const char *name)
 				break;
 		}
 
-	list[j] = strtok(aux, "=");
+	list = _strtok(aux, '=');
 
-	while (list[j])
-	{
-		j++;
-
-		list[j] = strtok(NULL, "=");
-
-		if (!list[j])
-			break;
-	}
-
-	list[j] = NULL;
-
-	getpath = list[1];
+	getpath = strdup(list[1]);
 
 	printf("%s\n", getpath);
 	printf("antes de llamar a get route\n");
@@ -62,21 +51,12 @@ int getroute(char *getpath)
 	char **list, *aux = getpath;
 	int i = 0, j = 0;
 
-	list[j] = strtok(aux, ":");
+	list = _strtok(aux, ':');
 	printf("antes de entrar al while del getroute\n");
-	while (list[j])
-	{
-		j++;
-		list[j] = strtok(NULL, ":");
-		if (!list[j])
-			break;
-	}
-
-	list[j] = NULL;
 
 	while (list[i])
 	{
-		printf("%s", list[i]);
+		printf("%s\n", list[i]);
 		path_linked_list(&head, list[i]);
 		i++;
 	}
@@ -101,7 +81,7 @@ listpath_t *path_linked_list(listpath_t **head, const char *str)
 	node_null->route = strdup(str);
 	node_null->next = NULL;
 
-		printf("node %s", node_null->route);
+		printf("node: %s\n", node_null->route);
 	if (!(*head))
 	{
 		*head = node_null;

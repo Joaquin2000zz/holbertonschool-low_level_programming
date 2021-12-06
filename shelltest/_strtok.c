@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -80,7 +81,7 @@ char **_strtok(char *str, char separator)
 	return (tokListReturn);
 }
 
-int main(void)
+/*int main(void)
 {
 	int i;
 	char *str = "hola=chau=uwu";
@@ -92,7 +93,7 @@ int main(void)
 		printf("%s\n",list[i]);
 	}
 	return (0);
-}
+}*/
 
 int freezer(char *str)
 {

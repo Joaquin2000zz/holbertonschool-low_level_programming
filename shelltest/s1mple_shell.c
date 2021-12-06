@@ -1,3 +1,4 @@
+#include "main.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,7 +10,7 @@
  *
  * Return: Always 0.
  */
-int getexeve(char **argv)
+int getexeve(char argv[0], char **argv, env)
 {
 	int pid;
 	pid = fork();
@@ -18,7 +19,9 @@ int getexeve(char **argv)
 		if (execve(argv[0], argv, NULL) == -1)
 		{
 			perror("Error:");
+			return(1);
 		}
+		
 	}
 	else
 		wait(NULL);
@@ -50,21 +53,9 @@ int main()
 		if (!list)
 			return (1);
 
-		list[i] = strtok(buffer, " ");
+		list = _strtok(buffer, ' ');
 
-		while (list[i])
-		{
-			i++;
-
-			list[i] = strtok(NULL, " ");
-
-			if (!list[i])
-				break;
-		}
-
-		list[i] = NULL; 
-
-		getexeve(list);
+		getexeve(list[0], list, env);
 		free(buffer);
 		free(list);
 
