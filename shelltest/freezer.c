@@ -6,15 +6,15 @@
   * Return: void because only is to free the nodep format nodes's list
   */
 
-void freezedLinkedList(nodep *pathLink)
+void freezedLinkedList(listpath_t *pathLink)
 {
-	nodep *tmpReference;
+	listpath_t *tmpReference;
 
 	while (pathLink)
 	{
 		tmpReference = pathLink;
 		pathLink = pathLink->next;
-		free(tmpReference->path);
+		free(tmpReference->route);
 		free(tmpReference);
 
 	}

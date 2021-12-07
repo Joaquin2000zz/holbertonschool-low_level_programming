@@ -4,7 +4,7 @@
 
 extern char **environ;
 
-char *_getenv(const char *name)
+//char *_getenv(const char *name)
 {
 	char **s = environ, *aux, **list, *getpath;
 	int i = 0;
@@ -13,7 +13,7 @@ char *_getenv(const char *name)
                 {
                         i++;
 			
-			aux = strstr(s[i], name);
+			aux = _strdup(strstr(s[i], name));
 			if (aux)
 				break;
                         if (!s[i])
@@ -26,9 +26,4 @@ char *_getenv(const char *name)
 
 	printf("%s\n", getpath);
 	return (getpath);
-}
-
-int main()
-{
-	_getenv("PATH");
 }

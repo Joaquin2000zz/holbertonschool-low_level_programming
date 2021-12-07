@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int freezer(char *str);
-
 
 /**
  * _strdup - returns a pointer to a newly allocated space in memory,
@@ -15,24 +13,19 @@ int freezer(char *str);
  */
 char *_strdup(char *str)
 {
-	unsigned int pos, len;
+	unsigned int a;
 	char *dup;
 
 	if (!str)
 		return (NULL);
-
-	for (len = 0; str[len] != 0;)
-		len++;
-
-	dup = (char *)malloc((sizeof(char) * len + 1));
-
-	if (dup == NULL)
+	for (a = 0; str[a]; a++)
+		;
+	dup = malloc(a + 1);
+	if (!dup)
 		return (NULL);
-
-	for (pos = 0; pos <= len; pos++)
-	{
-		dup[pos] = str[pos];
-	}
+	for (a = 0; str[a]; a++)
+		dup[a] = str[a];
+	dup[a] = 0;
 	return (dup);
 }
 
@@ -91,10 +84,11 @@ char **_strtok(char *str, char separator)
 	{	
 		printf("------------------------------------\n");
 		printf("%s\n",list[i]);
+		free(list[i]);
 	}
 	return (0);
-}*/
-
+}
+*/
 int freezer(char *str)
 {
 	int i;

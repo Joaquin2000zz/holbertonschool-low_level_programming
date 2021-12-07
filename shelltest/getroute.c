@@ -2,16 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct listpath_s
-{
-	char *route;
-	struct listpath_s *next;
-} listpath_t;
+#include <sys/stat.h>
 
 extern char **environ;
-int getroute(char *getpath);
-listpath_t *path_linked_list(listpath_t **head, const char *str);
+
 
 char *_getenv(const char *name)
 {
@@ -22,7 +16,7 @@ char *_getenv(const char *name)
 		{
 			i++;
 
-			aux = strstr(s[i], name);
+			aux = _strdup(strstr(s[i], name));
 			if (aux)
 				break;
 			if (!s[i])
@@ -35,21 +29,16 @@ char *_getenv(const char *name)
 
 	printf("%s\n", getpath);
 	printf("antes de llamar a get route\n");
-	getroute(getpath);
+
 	return (getpath);
 }
 
-int main()
-{
-	
-	_getenv("PATH");
-}
-
-int getroute(char *getpath)
+char *getroute(char *getpath, char *firstarg)
 {
 	listpath_t *head = NULL;
-	char **list, *aux = getpath;
+	char **list, *aux = getpath, *auxRoute = malloc(1024), *newbuffer = malloc(1024);
 	int i = 0, j = 0;
+	struct stat  st;
 
 	list = _strtok(aux, ':');
 	printf("antes de entrar al while del getroute\n");
@@ -61,37 +50,84 @@ int getroute(char *getpath)
 		i++;
 	}
 
-	return (0);
+	while (head)
+	{
+		auxRoute = _strcat(head->route, "/");
+		newbuffer = _strcat(auxRoute, firstarg);
+		printf("ruta posible %s\n", newbuffer);
+		printf("-------------------------------------\n");
+		head = head->next;
+		stat(newbuffer, &st);
+		if ((st.st_mode & S_IFMT) == S_IFREG)
+		{
+			
+			printf("ruta obtenida %s\n", newbuffer);
+			return (newbuffer);
+
+		}
+		else
+		{
+			freezer(auxRoute);
+			freezer(newbuffer);
+		}
+	}
+
+	return("error");
 }
 
-listpath_t *path_linked_list(listpath_t **head, const char *str)
+listpath_t *path_linked_list(listpath_t **head, char *str)
 {
-	listpath_t *new_node;
-	listpath_t *node_null;
+	listpath_t *aux_node;
+	listpath_t *end_node;
 
-	new_node = *head;
+	aux_node = *head;
 
-	node_null = malloc(sizeof(listpath_t));
-		if (!node_null)
+	end_node = malloc(sizeof(listpath_t));
+		if (!end_node)
 		{
-			free(node_null);
+			free(end_node);
 			return (NULL);
 		}
 
-	node_null->route = strdup(str);
-	node_null->next = NULL;
+	end_node->route = strdup(str);
+	end_node->next = NULL;
 
-		printf("node: %s\n", node_null->route);
+		printf("node: %s\n", end_node->route);
 	if (!(*head))
 	{
-		*head = node_null;
-		return (node_null);
+		*head = end_node;
+		return (end_node);
 	}
 
-	while (new_node->next)
+	while (aux_node->next)
 	{
-		new_node = new_node->next;
+		aux_node = aux_node->next;
 	}
-	new_node->next = node_null;
-	return (node_null);
+	aux_node->next = end_node;
+	return (end_node);
+}
+
+/**
+* _strcat - check the code
+* @dest: the variable to be joined with src
+* @src: the variable to be joined with dest
+* Return: dest and src merged.
+*/
+
+char *_strcat(char *dest, char *src)
+{
+	int n, l;
+
+	n = 0;
+
+	while (dest[n])
+		n++;
+
+	for (l = 0; src[l] != '\0'; l++)
+	{
+		dest[n] = src[l];
+		n++;
+	}
+
+		return (dest);
 }
