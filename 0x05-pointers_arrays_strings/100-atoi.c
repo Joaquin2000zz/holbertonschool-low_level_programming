@@ -1,6 +1,21 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+
+/**
+ * _strlen - check the length of a existing pointer
+ * @s: the char pointer
+ * Return: the pointer's length and 0 if dosen't exist
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
 
 /**
  * _atoi - convert a string to an integer
@@ -12,6 +27,8 @@ int _atoi(char *s)
 {
 	unsigned int len = 0, ret = 0, sign = 1;
 
+	if (_strlen(s) == 0)
+		return (0);
 	while (s)
 	{
 		if (s[len] == '-')
