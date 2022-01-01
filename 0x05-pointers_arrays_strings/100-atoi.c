@@ -14,7 +14,7 @@ int _strlen(char *s)
 		return (0);
 	while (s[i])
 	{
-		if (s[i] < 57 && s[i] > 48)
+		if (s[i] <= 57 && s[i] >= 48)
 			isN = 1;
 		i++;
 	}
@@ -43,7 +43,7 @@ int _atoi(char *s)
 		if (s[len] >= 48 && s[len] <= 57)
 			ret = (ret * 10) + s[len] - 48;
 		if (ret != 0)
-		{	
+		{
 			if (s[len + 1] > 57 || s[len + 1] < 48)
 				return (ret * sign);
 		}
