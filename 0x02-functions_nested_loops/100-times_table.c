@@ -41,7 +41,6 @@ void print_times_table(int n)
 				}
 				j++;
 			}
-			if (i < n)
 				_putchar('\n');
 		}
 }
