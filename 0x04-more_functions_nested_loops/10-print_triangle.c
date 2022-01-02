@@ -7,28 +7,21 @@
 
 void print_triangle(int size)
 {
-int a, b, c, d;
+int i, j, ispace, isnumeric = 0;
 
 if (size >= 1)
 {
-	for (b = 0; b <= size; b++)
+	for (i = 1; i <= size; i++)
 	{
-	for (a = 0; a < size; a++)
-	{
-	}
-	for (c = 0; c < (size - b); c++)
-	_putchar(' ');
-
-	for (d = 0; d < b; d++)
-	_putchar('#');
-	if (b < size)
+		ispace = size - i, isnumeric++;
+		if (ispace != 0)
+			for (j = 0; j < ispace; j++)
+				_putchar(' ');
+		for (j = 0; j < isnumeric; j++)
+			_putchar('#');
 		_putchar('\n');
 	}
-
 }
 else
-{
-_putchar('\n');
-}
-_putchar('\n');
+	_putchar('\n');
 }
