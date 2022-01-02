@@ -8,7 +8,8 @@
 
 void print_number(int n)
 {
-	int aux = n;
+	unsigned int aux = n;
+
 	if (aux < 0)
 	{
 		aux = -n;
