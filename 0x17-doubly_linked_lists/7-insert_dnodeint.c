@@ -28,7 +28,7 @@ size_t dlistint_len(const dlistint_t *h)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *aux, *new = malloc(sizeof(dlistint_t));
+	dlistint_t *aux = *h, *new = malloc(sizeof(dlistint_t));
 	unsigned int i = 0;
 	size_t len = 0;
 
@@ -48,12 +48,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		free(new);
 		return (add_dnodeint_end(h, n));
 	}
-	if (idx >= len)
+	if (idx > len + 1)
 	{
 		free(new);
 		return (NULL);
 	}
-	aux = *h, new->n = n;
+	new->n = n;
 	while (i < idx && aux)
 	{
 		if (idx == i + 1)
