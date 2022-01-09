@@ -14,7 +14,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int i = 0;
 	size_t len = 0;
 
-	if (!new && !(*h))
+	if (!new && !*h)
 	{
 		free(new);
 		return (NULL);
@@ -32,6 +32,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (idx >= len)
 	{
+		free(new;)
 		return (NULL);
 	}
 	aux = (*h), new->n = n;
