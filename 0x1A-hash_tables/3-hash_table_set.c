@@ -29,6 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 		new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-	printf("nodocreadocn value: %s y key: %s index: %lu\n", new_node->value, new_node->key, index);
+	/*printf("nodocreadocn value: %s y key: %s index: %lu\n",*/
+	/*new_node->value, new_node->key, index);*/
 	return (1);
 }
