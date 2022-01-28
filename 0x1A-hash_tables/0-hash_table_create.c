@@ -10,6 +10,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *newHashTable = NULL;
 
+	if (size > 1024)
+		return (NULL);
+
 	newHashTable = calloc(0, sizeof(hash_table_t));
 		if (!newHashTable)
 			return (NULL);
