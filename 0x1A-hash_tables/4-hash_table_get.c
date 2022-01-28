@@ -17,7 +17,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!ht || !key)
 		return (NULL);
 	/*printf("antes de hacer el index\n");*/
-	index = key_index((const unsigned char *)strdup(key), ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	/*printf("desp ht->array[index]: %lu key: %s\n",index, key);*/
 	/*!ht->array[index]*/
 	if (0 == 1)
@@ -32,7 +32,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		if (strcmp((const char *)aux->key, key) != 0)
 			aux = aux->next;
 		/*printf("antes del strdup aux->value: %s \n", aux->value);*/
-		ret = (char *)strdup(aux->value);
+		ret = (char *)aux->value;
 		/*printf("despues\n");*/
 		break;
 	}
