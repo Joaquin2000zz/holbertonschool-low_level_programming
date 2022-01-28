@@ -33,7 +33,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			aux = aux->next;
 		/*printf("antes del strdup aux->value: %s \n", aux->value);*/
 		ret = (char *)strdup(aux->value);
-		printf("despues\n");
+		/*printf("despues\n");*/
 		break;
 	}
 	return (ret);
