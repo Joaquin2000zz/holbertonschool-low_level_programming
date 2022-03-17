@@ -12,12 +12,11 @@ CC = gcc
 school: main.o school.o
 	$(CC) main.o school.o -o school
 
-SRC = main.c
+SRC = main.c school.c
 
 main.o: $(SRC)
 	$(CC) -c $(SRC)
 
-SRC = school.c
 
 school.o: $(SRC)
 	$(CC) -c $(SRC)
