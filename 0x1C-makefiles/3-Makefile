@@ -14,7 +14,7 @@ RM = rm
 all: $(NAME)
 clean: $(RM) *~ .* $(NAME)
 oclean: $(RM) $(OBJ)
-fclean: clean oclean
+fclean: $(RM) *~ .* $(NAME) $(RM) $(OBJ)
 re: fclean school
 
 school: $(OBJ)
