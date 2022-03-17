@@ -15,11 +15,3 @@ all: $(NAME)
 
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-
-main.o: $(SRC)
-	$(CC) -c $(SRC)
-
-
-school.o: $(SRC)
-	$(CC) -c $(SRC)
