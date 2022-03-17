@@ -1,0 +1,24 @@
+# -*- MakeFile -*-
+
+# all: example1 example2
+
+#target: dependencies
+#   action
+
+all: school
+
+CC = gcc
+OBJ = main.o school.o
+NAME = school
+
+school: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+SRC = main.c school.c
+
+main.o: $(SRC)
+	$(CC) -c $(SRC)
+
+
+school.o: $(SRC)
+	$(CC) -c $(SRC)
