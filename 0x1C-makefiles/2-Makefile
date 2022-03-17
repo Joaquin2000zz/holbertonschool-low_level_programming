@@ -5,16 +5,17 @@
 #target: dependencies
 #   action
 
-all: school
-
-CC = gcc
-OBJ = main.o school.o
 NAME = school
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+CC = gcc
+
+all: $(NAME)
+
 
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-SRC = main.c school.c
 
 main.o: $(SRC)
 	$(CC) -c $(SRC)
