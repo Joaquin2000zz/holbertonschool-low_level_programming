@@ -19,7 +19,7 @@ oclean:
 fclean:
 	$(RM) *~ .*.swp $(NAME)
 	$(RM) $(OBJ)
-re: fclean school
+re: fclean all
 
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
