@@ -16,12 +16,6 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-<<<<<<< HEAD
-=======
-	if (sizeof(array) / sizeof(int) == size)
-		return (-1);
-
->>>>>>> a421f931b6ee0e6dd4192d867fafc9005579c33a
 	printf("Searching in array: ");
 	for (i = 0; i < size; i++)
 		if (i == size - 1)
