@@ -31,7 +31,7 @@ double heron(double p)
 
 int jump_search(int *array, size_t size, int value)
 {
-	int square = (int)heron((float)size), jump = 0, i;
+	int square = (int)sqrt((float)size), jump = 0, i;
 
 	if (!array)
 		return (-1);
