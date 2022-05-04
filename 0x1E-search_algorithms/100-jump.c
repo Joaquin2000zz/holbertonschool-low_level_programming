@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <math.h>
 /**
  * heron- method which calculeates the srqt of a number
  * @p: number to find their square root
