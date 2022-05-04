@@ -1,5 +1,6 @@
 #include "search_algos.h"
 #include <math.h>
+
 /**
  * jump_search - search a number in sub vectors. O(sqrt(n))
  * @array: array to traverse
@@ -18,7 +19,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		if (jump <= (int)size || jump == 0)
 		{
-			if (jump + square >= value)
+			if (jump + square > value)
 			{
 				printf("Value found between indexes [%d] and [%d]\n", jump, jump + square);
 				for (i = jump; i < (-jump + (int)size); i++)
