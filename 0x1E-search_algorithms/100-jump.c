@@ -1,24 +1,5 @@
 #include "search_algos.h"
-/**
- * heron- method which calculeates the srqt of a number
- * @p: number to find their square root
- * Return: the square root of p
- */
-double heron(double p)
-{
-	double x = p, xn = 0.5 * p;
-	int i = 0;
-
-	while (1)
-	{
-		xn = 0.5 * (xn + (p / xn));
-		if (x == xn)
-			break;
-		x = xn;
-		i++;
-	}
-	return (xn);
-}
+#include <math.h>
 
 /**
  * jump_search - search a number in sub vectors. O(sqrt(n))
@@ -30,7 +11,7 @@ double heron(double p)
 
 int jump_search(int *array, size_t size, int value)
 {
-	int square = (int)heron((float)size), jump = 0, i;
+	int square = (int)sqrt((float)size), jump = 0, i;
 
 	if (!array)
 		return (-1);
