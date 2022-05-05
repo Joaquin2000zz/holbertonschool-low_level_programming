@@ -10,22 +10,23 @@
 
 int interpolation_search(int *array, size_t size, int value)
 {
-	int low = 0, high = size - 1, mid, distance, relative;
+	int low = 0, high = size - 1, mid, *arr;
 
 	if (!array)
 		return (-1);
+	arr = array;
 	while ((array[high] != array[low]) &&
 	       (value >= array[low]) &&
 	       (value <= array[high]))
 	{
-		distance = low + (value - array[low]);
-		relative = (high - low) / (array[high] - array[low]);
-		mid = distance * relative;
+		mid = (value - arr[low]) * (high - low) / (arr[high] - arr[low]);
+		mid += low;
 		printf("Value checked array[%d] = [%d]\n", mid, array[mid]);
 		if (array[mid] < value)
 			low = mid + 1;
 		else if (value < array[mid])
-		lse
+			high = mid - 1;
+		else
 			return (mid);
 	}
 
